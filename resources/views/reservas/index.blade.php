@@ -25,7 +25,6 @@
                 </div>
             </div>
         </div>
-
         <div class="row">
             @foreach ($reservas as $reserva)
                 <div class="col-md-4">
@@ -43,8 +42,7 @@
                                 <form action="{{ route('reservas.destroy', $reserva) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-outline-danger ml-2"
-                                        onclick="return confirm('¿Estás seguro de eliminar esta reserva?')">
+                                    <button type="submit" class="btn btn-outline-danger ml-2">
                                         <i class="fa-solid fa-trash"></i>
                                     </button>
                                 </form>
